@@ -4,7 +4,12 @@
 
 # 导入要使用的模块
 import sys
-sys.path.append('../..')
+import os
+# sys.path.append('../..')
+# from tools1.os_demo import get_root_dir
+def get_root_dir():
+    return os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+sys.path.append(get_root_dir())
 from hogwartsgfis02.pythoncode.calc import Calculator
 import pytest
 import yaml
@@ -70,6 +75,7 @@ class TestClacu():
 
     # 定义测试除法的参数以及方法
     @pytest.mark.parametrize('a,b,result',div_param,ids=div_ids)
+    @pytest.mark.div
     def testdiv(self, a, b, result):
         try:
             r = self.calcu.div(a, b)
