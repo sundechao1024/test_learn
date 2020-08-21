@@ -25,7 +25,7 @@ def get_root_dir():
 
 sys.path.append(get_root_dir())
 
-with open("./calcu.yml", encoding='UTF-8') as f:
+with open(r"E:\growth_autotest\learn\test_learn\/calcu.yml", encoding='UTF-8') as f:
     dates = yaml.safe_load(f)
     # 获取测试加法的参数
     add_param = dates['add']['add_params']

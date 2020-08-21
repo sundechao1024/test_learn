@@ -5,7 +5,7 @@
 
 '''
 
-from task_hsx.task_0731 import TongLao
+from xuzhu.task_0731 import TongLao
 
 class XuZhu(TongLao):
 
